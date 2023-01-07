@@ -1,0 +1,16 @@
+.text_head{
+    font-size: 25px;
+    color: rgb(152, 11, 1);
+    text-align: left;
+    position: relative;
+    top: -3px;
+}
+.para_txt{
+    font-size: 30px;
+    line-height: 25px;
+    text-align: justify;
+    word-spacing: 4px;
+    letter-spacing: 0.5px;
+    font-family: Edwardian Script ITC;
+    color: rgb(74, 1, 143);
+}
