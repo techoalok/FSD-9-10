@@ -10,6 +10,12 @@
     background-color: rgb(223, 221, 221);
     margin:5px 5px 0px 5px;
 }
+#menu{
+    width: calc(100% - 10px);
+    height: 40px;
+    background-color: blueviolet;
+    margin: 5px 5px 0px;
+}
 #top{
     width: 100%;
     padding: 5px;
