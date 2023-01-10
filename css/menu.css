@@ -42,3 +42,34 @@ ul li:hover a{
     display: block;
     color:#fff;
 }
+.icon{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+#mobile{
+    display: none;
+}
+#mobile li{
+    background: none;
+}
+#mobile li:first-child{
+    margin-left: 0px;
+    position: relative;
+    top: 2px;
+}
+#mobile li:last-child{
+    float: right;
+    position: relative;
+    top: 2px;
+}
+#desktop{
+    display: block;
+}
+@media(max-width:720px){
+    #mobile{
+        display: block;
+    }
+    #desktop{
+        display: none;
+    }
+}
