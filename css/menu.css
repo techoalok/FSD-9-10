@@ -45,6 +45,8 @@ ul li:hover a{
 .icon{
     color: rgb(255, 255, 255);
     font-size: 20px;
+    margin-right: 10px;
+    cursor:pointer;
 }
 #mobile{
     display: none;
@@ -65,11 +67,33 @@ ul li:hover a{
 #desktop{
     display: block;
 }
+#check{
+    display: none;
+}
 @media(max-width:720px){
     #mobile{
         display: block;
     }
     #desktop{
-        display: none;
+        position:absolute;
+        width: calc(100% - 20px);
+        height: auto;
+        z-index: 2;
+        padding-right: 5px;
+        box-sizing: border-box;
+        left: -100%;
+        transition: all 1s;
+        opacity: 0;
+    }
+    #desktop li{
+        float: none;
+    }
+    #desktop li ul{
+        float: none;
+        width: calc(100% - 10px);
+    }
+    #check:checked ~ #desktop{
+        left: 10px;
+        opacity: 1;
     }
 }
