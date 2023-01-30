@@ -14,3 +14,16 @@
     font-family: Edwardian Script ITC;
     color: rgb(74, 1, 143);
 }
+.txt_box{
+    background-color: rgb(228, 214, 214);
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    border-bottom: solid 1px rgb(107, 98, 98);
+}
+.txt_box:focus{
+    border-bottom: solid 1px rgb(243, 4, 4);
+}
+.full_width{
+    width: calc(100% - 20px);
+}
