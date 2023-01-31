@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS DOM Example</title>
+    <style>
+        input{
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="box1" class="box"><br>
-    <button id="btn" onclick="clickBtn()">Click</button><br>
-    <span id="disp">Display Area</span>
-    <h1>Heading1</h1>
-    <h1>Heading2</h1>
-    <h1>Heading3</h1>
-    <h1>Heading4</h1>
-    <p>Paragraph1</p>
-    <p>Paragraph2</p>
-    <p>Paragraph3</p>
-    <p>Paragraph4</p>
+    <center>
+        <input type="text" id="box1" title="Enter value box1" placeholder="Box1"><br><br>
+        <input type="text" id="box2" title="Enter value box2" placeholder="Box2"><br><br>
+        <button id="btn">Submit</button><br><br>
+        <fieldset>
+            <legend>Output</legend>
+            <span id="disp"></span>
+        </fieldset>
+    </center>
 </body>
 </html>
 <script src="js/style.js"></script>
