@@ -20,3 +20,10 @@ btn.addEventListener('click', ()=>{
 a1.addEventListener('keyup',()=>{
     a1.style.border = "2px solid green"
 })
+
+var p = document.querySelectorAll('p');
+for(const i of p){
+    p.addEventListener('click',()=>{
+        this.remove()
+    })
+}
