@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Parse</title>
+</head>
+<body>
+    <center>
+        <input type="text" id="input_img" placeholder="Enter HTML Code"><br><br>
+        <div id="disp" style="width:100px;height:100px;background-image: url('images/Tulips.jpg');background-size:cover;">
+        </div>
+    </center>
+</body>
+</html>
+<script>
+    var a = document.getElementById('input_img');
+    a.addEventListener('keyup',()=>{
+        var a = document.getElementById('input_img').value;
+        if(a==""){
+            document.getElementById('disp').style.background = 'silver'
+        }else{
+            document.getElementById('disp').style.backgroundSize = 'cover'
+            var d = document.getElementById('disp').style.backgroundImage = "url(images/"+a+")";
+        }
+    })
+</script>
