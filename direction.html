@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #boll{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100px;
+            position: relative;
+            left: 620px;
+        }
+        #btn{
+            position: absolute;
+            bottom: 10px;
+            left: 530px;
+        }
+        #btn button{
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="boll"></div>
+    <div id="btn">
+        <button>Left</button>
+        <button>Right</button>
+        <button>Up</button>
+        <button>Down</button>
+    </div>
+</body>
+</html>
+<script>
+    ltr = 620;
+    utd = 0
+    boll = document.getElementById("boll").style;
+    // console.log(boll);
+    btn = document.querySelectorAll('button');
+    btn[0].addEventListener('click',()=>{
+        ltr -= 5;
+        document.getElementById("boll").style.left = ltr + "px";
+    })
+    btn[1].addEventListener('click',()=>{
+        ltr += 5;
+        document.getElementById("boll").style.left = ltr + "px";
+    })
+    btn[2].addEventListener('click',()=>{
+        utd -= 5;
+        document.getElementById("boll").style.top = utd + "px";
+    })
+    btn[3].addEventListener('click',()=>{
+        utd += 5;
+        document.getElementById("boll").style.top = utd + "px";
+    })
+</script>
