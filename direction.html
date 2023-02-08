@@ -57,4 +57,34 @@
         utd += 5;
         document.getElementById("boll").style.top = utd + "px";
     })
+
+    document.body.addEventListener('keydown',(e) => {
+        btn[0].style.background = "none";
+        btn[1].style.background = "none";
+        btn[2].style.background = "none";
+        btn[3].style.background = "none";
+        if(e.keyCode==37){
+            ltr -= 5;
+            document.getElementById("boll").style.left = ltr + "px";
+            btn[0].style.background = "green";
+        }else if(e.keyCode==38){
+            utd -= 5;
+            document.getElementById("boll").style.top = utd + "px";
+            btn[2].style.background = "green";
+        }
+        else if(e.keyCode==39){
+            ltr += 5;
+            document.getElementById("boll").style.left = ltr + "px";
+            btn[1].style.background = "green";
+        }
+        else if(e.keyCode==40){
+            utd += 5;
+            document.getElementById("boll").style.top = utd + "px";
+            btn[3].style.background = "green";
+        }
+        else{
+            // alert("Press directional keys")
+        }
+    })
+
 </script>
