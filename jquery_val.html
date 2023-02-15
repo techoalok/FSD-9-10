@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Form Validation</title>
+    <style>
+        span{
+            color: red;
+            font-size: 10px;
+            position: relative;
+            top: -5px;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <label for="username">Username : </label><br>
+    <input type="text" id="username" placeholder="Username"><br>
+    <span id="usernameerror"></span>
+    <br>
+    <label for="email">Email-ID : </label><br>
+    <input type="email" id="email" placeholder="Email-ID"><br>
+    <span id="emailerror"></span>
+    <br>
+    <label for="pwd">Password : </label><br>
+    <input type="password" id="pwd" placeholder="Password"><br>
+    <span id="pwderror"></span>
+    <br>
+    <button>Submit</button><br>
+    <div></div>
+</body>
+</html>
+<script>
+    $(()=>{
+        function reset(){
+            $("#username").val("");
+            $("#email").val("");
+            $("#pwd").val("");
+            $("#usernameerror").text("");
+            $("#emailerror").text("")
+            $("#pwderror").text("")
+            $("#username").focus();
+        }
+        $("button").click(()=>{
+            uid = $("#username").val();
+            eid = $("#email").val();
+            pwd = $("#pwd").val();
+
+            if(uid==""){
+                $("#usernameerror").text("Username is required...");
+                $("#username").focus();
+            }else if(eid==""){
+                $("#emailerror").text("Email-ID is required...")
+                $("#email").focus();
+            }else if(pwd==""){
+                $("#pwderror").text("Password is required...")
+                $("#pwd").focus();
+            }else{
+                $("div").html("Username : "+uid + "<br>" + "Email-ID : "+eid + "<br>" +"Password : "+pwd)
+                reset()
+            }
+        })
+    })
+</script>
